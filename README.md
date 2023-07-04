@@ -3,7 +3,7 @@ A plugin for TShock that allows admins to block certain NPCs from spawning in th
 
 - Originally made by [Olink](https://github.com/Olink)
 - Originally updated for **TShock** `4.5.3` on **Terraria** `1.4.2.3` by [moisterrific](https://github.com/moisterrific).
-- Originally upgraded by adding support for having a limit of npc's that can spawn into a world by [Moneylover3246](https://github.com/Moneylover3246).
+- Upgraded by adding support for having a limit of npc's that can spawn into a world by [Moneylover3246](https://github.com/Moneylover3246).
 - Updated for **TShock** `5.2` on **Terraria** `1.4.4.9` by yours truly.
 - Fixed most of the issues from the previous version.
 - Now supports the latest TShock silent command specifier 
