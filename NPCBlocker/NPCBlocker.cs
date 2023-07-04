@@ -37,7 +37,7 @@ namespace NPCBlocker
 
         public override Version Version
         {
-            get { return new Version(2, 1); }
+            get { return new Version(2, 2); }
         }
 
         public override string Name
