@@ -16,7 +16,7 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.IO;
-using Mono.Data.Sqlite;
+using Microsoft.Data.Sqlite;
 using MySql.Data.MySqlClient;
 using TerrariaApi.Server;
 using TShockAPI;
@@ -47,7 +47,7 @@ namespace NPCBlocker
 
         public override string Author
         {
-            get { return "Olink, updated by moisterrific + Moneylover3246"; }
+            get { return "Olink, updated by moisterrific + Moneylover3246 + Maxthegreat99"; }
         }
 
         public override string Description
@@ -86,7 +86,7 @@ namespace NPCBlocker
             if (TShock.Config.Settings.StorageType.ToLower() == "sqlite")
             {
                 string sql = Path.Combine(TShock.SavePath, "npc_blocker.sqlite");
-                db = new SqliteConnection(string.Format("uri=file://{0},Version=3", sql));
+                db = new SqliteConnection(string.Format("Data Source={0}", sql));
             }
             //else if (TShock.Config.StorageType.ToLower() == "mysql")
             else if (TShock.Config.Settings.StorageType.ToLower() == "mysql")
