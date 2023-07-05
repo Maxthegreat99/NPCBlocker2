@@ -21,8 +21,10 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
-    <PackageReference Include="System.Data.DataSetExtensions" Version="4.5.0" />
-    <PackageReference Include="TShock" Version="5.2.0" />
+    <PackageReference Include="Microsoft.Data.Sqlite" Version="6.0.11" />
+    <PackageReference Include="MySql.Data" Version="8.0.31" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="System.Data.DataSetExtensions" Version="4.6.0-preview3.19128.7" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="ModFramework">
@@ -33,6 +35,9 @@
     </Reference>
     <Reference Include="TerrariaServer">
       <HintPath>..\..\TShock-5.2-for-Terraria-1.4.4.9-win-x64-Release\bin\TerrariaServer.dll</HintPath>
+    </Reference>
+    <Reference Include="TShockAPI">
+      <HintPath>..\..\TShock-5.2-for-Terraria-1.4.4.9-win-x64-Release\ServerPlugins\TShockAPI.dll</HintPath>
     </Reference>
   </ItemGroup>
 </Project>
