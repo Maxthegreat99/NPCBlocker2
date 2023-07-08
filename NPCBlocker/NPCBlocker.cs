@@ -37,7 +37,7 @@ namespace NPCBlocker
 
         public override Version Version
         {
-            get { return new Version(2, 2); }
+            get { return new Version(2, 2, 1); }
         }
 
         public override string Name
@@ -141,7 +141,8 @@ namespace NPCBlocker
             {
                 int id = reader.Get<int>("ID");
                 int amount = reader.Get<int>("AmounttoSpawn");
-                blockedNPC.Add(id, amount);
+                if(!blockedNPC.ContainsKey(id))
+                    blockedNPC.Add(id, amount);
             }
         }
 
@@ -239,17 +240,17 @@ namespace NPCBlocker
                             args.Player.SendErrorMessage("The amount of NPC's to ban must be greater than or equal to 0");
                             return;
                         }
-                        db.Query("INSERT INTO Blocked_NPC(AmounttoSpawn) VALUES(@0);", amountToSpawn);
+                        db.Query("UPDATE Blocked_NPC SET AmounttoSpawn = @0;", amountToSpawn);
                         blockedNPC.Add(id, amountToSpawn);
                     }
                     else
                     {
-                        db.Query("INSERT INTO Blocked_NPC(AmounttoSpawn) VALUES(@0);", 0);
+                        db.Query("UPDATE Blocked_NPC SET AmounttoSpawn = @0;", 0);
                         blockedNPC.Add(id, 0);
                     }
                     if (args.Silent || ConfigFile.BlockBanMessageToOthers)
                     {
-                        args.Player.SendSuccessMessage(ConfigFile.NPCAddedMessageSilent, npc.FullName, npc.type);
+                        args.Player.SendSuccessMessage(ConfigFile.NPCAddedMessageSilent, npc.FullName, npc.type, amountToSpawn);
                     } 
                     else
                     {
