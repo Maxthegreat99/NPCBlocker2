@@ -21,7 +21,7 @@ A plugin for TShock that allows admins to block certain NPCs from spawning in th
 ### Usage and Examples
 - `/blocknpc <NPC name or ID> <Max spawn limit (Default 0)`
 - `/unblocknpc <NPC name or ID>`
-- `.banmob Zombie 5` - Allows Zombies to spawn in the world only 5 times, and will silently send a message
+- `.banmob Zombie 5` - Allows only 5 Zombies to be alive in the world at the same time, and will silently send a message
 - `/unbanmob king slime` - Tells all players on the server you unbanned King Slime from spawning
 - `/npc-reload` - Reloads the config
 
